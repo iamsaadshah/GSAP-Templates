@@ -1,0 +1,311 @@
+<!-- Remix icons (keep) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+<!-- SECTION: Services (fixed + animated) -->
+<section class="services-section">
+  <div class="elem-container">
+    <!-- Card 1 -->
+    <div class="elem line1 left">
+      <div class="elem-inner">
+        <div class="elem-part1">
+          <h2>1. Search Engine Optimization</h2>
+          <h4><i class="ri-arrow-right-up-line"></i> Learn More</h4>
+        </div>
+        <div class="elem-part2">
+          <img src="assets/remove background fr.png" alt="SEO" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 (dark variant kept if needed) -->
+    <div class="elem bg-black line1 right">
+      <div class="elem-inner">
+        <div class="elem-part1">
+          <h2>2. Search Engine Marketing</h2>
+          <h4 class="text-white"><i class="ri-arrow-right-up-line"></i> <span class="text-white">
+              Learn More
+            </span></h4>
+        </div>
+        <div class="elem-part2">
+          <img src="assets/remove background fr.png" alt="SEM" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="elem bg-black line2 left">
+      <div class="elem-inner">
+        <div class="elem-part1">
+          <h2>3. Social Media Marketing</h2>
+          <h4><i class="ri-arrow-right-up-line"></i> <span class="text-white">
+              Learn More
+            </span></h4>
+        </div>
+        <div class="elem-part2">
+          <img src="assets/remove background fr.png" alt="SMM" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="elem line2 right">
+      <div class="elem-inner">
+        <div class="elem-part1">
+          <h2>4. Content Marketing</h2>
+          <h4><i class="ri-arrow-right-up-line"></i> Learn More</h4>
+        </div>
+        <div class="elem-part2">
+          <img src="assets/remove background fr.png" alt="Content" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 5 -->
+    <div class="elem line3 left">
+      <div class="elem-inner">
+        <div class="elem-part1">
+          <h2>5. Email Marketing</h2>
+          <h4><i class="ri-arrow-right-up-line"></i> Learn More</h4>
+        </div>
+        <div class="elem-part2">
+          <img src="assets/remove background fr.png" alt="Email" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 6 -->
+    <div class="elem bg-black line3 right">
+      <div class="elem-inner">
+        <div class="elem-part1">
+          <h2>6. Web Development</h2>
+          <h4><i class="ri-arrow-right-up-line"></i> <span class="text-white">
+              Learn More
+            </span></h4>
+        </div>
+        <div class="elem-part2">
+          <img src="assets/remove background fr.png" alt="Web Dev" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Styles -->
+<style>
+  /* reset/contain */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+    /* background: #FFF5F5; */
+  }
+
+  /* section container */
+  .services-section {
+    padding: 64px 20px;
+  }
+
+  .elem-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  /* card / layout */
+  .elem {
+    margin-bottom: 25px;
+    flex: 0 1 calc(43% - 12px);
+    /* 2 per row with gap */
+    min-width: 280px;
+    background: #fff;
+    border: 2px solid rgba(0, 0, 0, 0.06);
+    border-radius: 16px;
+    box-shadow: 0 26px 0 rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    /* CRITICAL: contain transforms */
+    position: relative;
+  }
+
+  /* inner wrapper is animated, not .elem */
+  .elem-inner {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding: 18px;
+    transform: translateX(0);
+    will-change: transform, opacity;
+  }
+
+  /* content parts */
+  .elem-part1 {
+    flex: 1 1 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .elem-part2 {
+    flex: 0 0 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .elem-part2 img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    max-height: 160px;
+    display: block;
+  }
+
+  /* heading accent using primary color */
+  .elem-part1 h2 {
+    margin: 0;
+    padding: 8px 10px;
+    background: #EB433D;
+    /* primary */
+    color: #fff;
+    border-radius: 8px;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  .elem-part1 h4 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #111827;
+    font-weight: 500;
+  }
+
+  .elem-part1 h4 i {
+    width: 36px;
+    height: 36px;
+    display: inline-grid;
+    place-items: center;
+    background: #111;
+    color: #fff;
+    border-radius: 50%;
+    transition: transform .3s ease;
+  }
+
+  .elem-part1 h4 i:hover {
+    transform: rotate(405deg) scale(1.06);
+  }
+
+  /* dark variant */
+  .elem.bg-black {
+    background: #111827;
+    border-color: transparent;
+    box-shadow: 0 26px 0 rgba(235, 67, 61, 0.12);
+  }
+
+  .elem.bg-black .elem-part1 h2 {
+    background: #fff;
+    color: #111827;
+  }
+
+  /* .elem.bg-black .elem-part1 h4,
+  {
+  color: red;
+  } */
+
+  .elem.bg-black .elem-part1 h4 i {
+    color: #000;
+    background: #fff;
+  }
+
+  .elem.bg-black .elem-part1 h4 i {
+    color: #111827;
+  }
+
+  /* hover lift */
+  .elem:hover {
+    transform: translateY(-6px);
+    transition: transform .25s ease;
+  }
+
+  /* responsive adjustments */
+  @media (max-width: 1024px) {
+    .elem {
+      flex: 0 1 calc(48% - 12px);
+    }
+
+    .elem-part2 img {
+      max-height: 140px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .elem-container {
+      gap: 16px;
+      padding: 40px 12px;
+    }
+
+    .elem {
+      flex: 1 1 100%;
+      width: 100%;
+      min-width: 0;
+      border-radius: 12px;
+    }
+
+    .elem-inner {
+      flex-direction: row;
+      padding: 14px;
+    }
+
+    .elem-part2 {
+      flex: 0 0 40%;
+      padding-left: 8px;
+    }
+
+    .elem-part1 h2 {
+      font-size: 1rem;
+    }
+  }
+</style>
+
+<!-- GSAP + ScrollTrigger -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+<script>
+  (function () {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // animate each card's .elem-inner; left cards come from left, right from right.
+    gsap.utils.toArray('.elem').forEach((el) => {
+      const inner = el.querySelector('.elem-inner');
+      const fromLeft = el.classList.contains('left');
+      gsap.set(inner, { opacity: 0, x: fromLeft ? -50 : 50, scale: 0.98 });
+
+      gsap.to(inner, {
+        x: 0,
+        opacity: 1,
+        scale: 1,
+        duration: 0.7,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: el,
+          start: 'top 85%',
+          toggleActions: 'play none none reverse',
+          // markers: true, // enable to debug positions
+        }
+      });
+    });
+  })();
+</script>
